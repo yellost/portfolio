@@ -1,0 +1,161 @@
+body {
+    font-family: 'Amatic SC', cursive;
+    padding: 25px 0;
+    background-color:$darkGrey;
+    color: $beige;
+    background-image: url('../img/bg_bigger.jpg');
+    background-position: center;
+    background-size: cover;
+}
+a {
+    text-decoration: none;
+}
+nav {
+    position: absolute;
+    z-index: 10;
+    top:65px;
+    right: 165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    @include border-solid (2px, $beige);
+    transition: .3s all linear .6s;
+    &:before {
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaley(.95) scalex(.965);
+        border-radius: 10px;
+        @include border-dash (2px, $beige);
+    }
+    .menu {
+        cursor: pointer;
+        position: absolute;
+        right:6px;
+        width: 64px;
+        height: 64px;
+        &.about {
+            transition: .1s right linear .6s;
+        }
+        &.work {
+            transition: .1s right linear .6s;
+        }
+        &.contact {
+            transition: .1s right linear .6s;
+        }
+        .line {
+            position: absolute;
+            left: 17px;
+            width: 30px;
+            height: 0;
+            @include border-solid (1px, $beige);
+            border-radius: 3px;
+            transition: .1s all linear .3s, .3s top linear .4s;
+            &.top {
+                top: 15px;
+            }
+            &.mid {
+                top: 28px;
+            }
+            &.bot {
+                top: 41px;
+            }
+        }
+    }
+    &:hover {
+        width: 192px;
+        transition: .3s all linear;
+        .menu {
+            position: absolute;
+            &.about {
+                transition: .1s right linear .1s;
+                right:128px;
+                .line {
+                    transition: .1s all linear .4s, .3s top linear .3s;
+                    // transition: .3s top linear, .1s left linear .3s, .1s height linear .6s, .1s width linear .3s, .1s border linear .3s;
+                    &.top {
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 50%;
+                        top: 10px;
+                        left: 21px;
+                        @include border-solid (2px, $beige);
+                    }
+                    &.mid {
+                        opacity: 0;
+                    }
+                    &.bot {
+                        height: 20px;
+                        width: 28px;
+                        top: 32px;
+                        border-radius: 33%;
+                        @include border-solid (2px, $beige);
+                        border-bottom: none;
+                    }
+                }
+            }
+            &.work {
+                transition: .1s right linear .2s;
+                right:64px;
+                .line {
+                    transition: .1s all linear .4s, .3s top linear .3s;
+                    // transition: .3s top linear, .1s height linear .3s, .1s border linear .3s;
+                    &.top {
+                        height: 20px;
+                        top: 15px;
+                        @include border-solid (2px, $beige);
+                    }
+                    &.mid {
+                        top: 33px;
+                        left: 30px;
+                        height: 10px;
+                        width: 0;
+                        @include border-solid (1px, $beige);
+                    }
+                    &.bot {
+                        top: 43px;
+                        @include border-solid (1px, $beige);
+                    }
+                }
+            }
+            &.contact {
+                transition: .1s right linear 0s;
+                right:0;
+                .line {
+                    transition: .1s all linear .4s, .3s top linear .3s;
+                    // transition: .3s top linear, .1s transform linear .3s, .1s height linear .3s, .1s border linear .3s;
+                    &.top {
+                        height: 25px;
+                        width: 35px;
+                        top: 20px;
+                        left: 14px;
+                        @include border-solid (2px, $beige);
+                    }
+                    &.mid {
+                        top: 25px;
+                        left: 14px;
+                        width: 20px;
+                        @include border-solid (1px, $beige);
+                        transform: rotateZ(35deg);
+                    }
+                    &.bot {
+                        top: 25px;
+                        left: 28px;
+                        width: 20px;
+                        @include border-solid (1px, $beige);
+                        transform: rotateZ(-35deg);
+                    }
+                }
+            }
+        }
+    }
+}

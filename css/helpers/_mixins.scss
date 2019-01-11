@@ -1,0 +1,17 @@
+
+@mixin border {
+    border: 1px solid white;
+}
+@mixin border-solid($width, $color) {
+    border: $width solid $color;
+}
+@mixin border-dash($width, $color) {
+    border: $width dashed $color;
+}
+@mixin AnimUpAndDown($id,$up,$down,$duration) {
+    @keyframes upAndDown#{$id} {
+        from {transform: translateY($up)}
+        to {transform: translateY($down)}
+    }
+    animation: upAndDown#{$id} $duration ease-in-out infinite alternate;
+}

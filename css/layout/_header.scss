@@ -1,0 +1,45 @@
+header {
+    position: fixed;
+    left: 25px;
+    width: calc(100vw - 50px);
+    height: calc(100vh - 25px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // @include border;
+    h1{
+        margin: 0;
+        font-size: 110px;
+        font-weight: 400;
+        &.right {
+            font-size: 00px;
+            opacity: 0;
+        }
+    }
+    h2 {
+        margin: 0;
+        font-size: 30px;
+        text-align: center;
+    }
+    &.pages {
+        flex-direction: row;
+        justify-content: space-between;
+        h1{
+        margin: 0;
+        font-size: 60px;
+        font-weight: 400;
+        // letter-spacing: -4px;
+        writing-mode: vertical-lr;
+        transform: rotateZ(-180deg);
+        &.right {
+            font-size: 60px;
+            opacity: 1;
+            transform: rotateZ(0);
+        }
+        }
+        .fct {
+        display: none;
+        }
+    }
+}

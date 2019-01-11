@@ -1,0 +1,68 @@
+// index
+main {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: calc(100vw - 50px);
+    height: calc(100vh - 50px);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba($beige,.5),inset 0 0 10px rgba($beige,.3);
+    @include border-solid (2px, $beige);
+    &.pages {
+        width: calc(100vw - 250px);
+    }
+}
+section {
+    position: absolute;
+    width:98%;
+    height: 96%;
+    padding:25px 10%;
+    border-radius: 10px;
+    @include border-dash (2px, $beige);
+    overflow: hidden;
+    h1 {
+        margin:0;
+        font-size: 60px;
+        font-weight: 400;
+    }
+    .blurb {
+        position: relative;
+        height: 80%;
+        width: 50%;
+        padding: 35px;
+        margin-top: 25px;
+        @include border-solid (2px, $beige);
+        border-radius: 10px;
+        font-family: 'Coming Soon', cursive;
+        font-size: 1.5rem;
+        &:after {
+            content:"";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scaley(.95) scalex(.965);
+            border-radius: 10px;
+            @include border-dash (2px, $beige);
+
+        }
+    }
+    &.closed {
+        padding:0;
+        bottom:5%;
+        width:70px;
+        height: 0;
+        @include border-dash (1px, $beige);
+        &.about {
+            left:25%;
+        }
+        &.contact {
+            right:25%;
+        }
+    }
+
+}
