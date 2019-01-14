@@ -7,7 +7,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // @include border;
+    transition: .1s all linear;
     h1{
         margin: 0;
         font-size: 110px;

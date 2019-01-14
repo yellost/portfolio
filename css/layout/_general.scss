@@ -25,7 +25,7 @@ nav {
     height: 80px;
     border-radius: 10px;
     @include border-solid (2px, $beige);
-    transition: .3s all linear .6s;
+    transition: .15s all linear .4s;
     &:before {
         content:"";
         position: absolute;
@@ -44,13 +44,13 @@ nav {
         width: 64px;
         height: 64px;
         &.about {
-            transition: .1s right linear .6s;
+            transition: .15s right linear 0.4s;
         }
         &.work {
-            transition: .1s right linear .6s;
+            transition: .1s right linear 0.4s;
         }
         &.contact {
-            transition: .1s right linear .6s;
+            transition: .1s right linear 0.4s;
         }
         .line {
             position: absolute;
@@ -59,7 +59,7 @@ nav {
             height: 0;
             @include border-solid (1px, $beige);
             border-radius: 3px;
-            transition: .1s all linear .3s, .3s top linear .4s;
+            transition: .1s all linear 0s, .3s top linear .1s;
             &.top {
                 top: 15px;
             }

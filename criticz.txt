@@ -1,0 +1,14 @@
+sarah :
+menus de la même couleur que leur section
+skills timides vont se cacher qd on descend...
+scroll encore présent qd on est tt en bas
+formulaire de contact + mail:to ?
+erreur ds txt de contact
+
+Martin:
+orientated
+
+Kamil:
+plus de menu au scroll
+trucs bizarres de hover
+

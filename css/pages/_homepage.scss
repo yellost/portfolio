@@ -11,12 +11,15 @@ main {
     overflow: hidden;
     box-shadow: 0 0 10px rgba($beige,.5),inset 0 0 10px rgba($beige,.3);
     @include border-solid (2px, $beige);
+    transition: .1s all linear;
     &.pages {
         width: calc(100vw - 250px);
     }
 }
 section {
     position: absolute;
+    z-index: 1;
+    top:2%;
     width:98%;
     height: 96%;
     padding:25px 10%;
@@ -51,18 +54,14 @@ section {
 
         }
     }
+    transition: 0s all linear .8s, .3s top linear .2s, .2s width linear .5s, .2s height linear .5s;
     &.closed {
+        z-index: 3;
         padding:0;
-        bottom:5%;
-        width:70px;
+        top:95%;
+        width:2%;
         height: 0;
-        @include border-dash (1px, $beige);
-        &.about {
-            left:25%;
-        }
-        &.contact {
-            right:25%;
-        }
+        transition: 0s all linear .1s, .3s top linear .4s, .2s width linear .2s, .2s height linear;
     }
 
 }

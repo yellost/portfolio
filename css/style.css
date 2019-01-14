@@ -358,6 +358,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
 }
 
 header h1 {
@@ -448,8 +450,8 @@ nav {
   height: 80px;
   border-radius: 10px;
   border: 2px solid #FECF93;
-  -webkit-transition: .3s all linear .6s;
-  transition: .3s all linear .6s;
+  -webkit-transition: .15s all linear .4s;
+  transition: .15s all linear .4s;
 }
 
 nav:before {
@@ -474,18 +476,18 @@ nav .menu {
 }
 
 nav .menu.about {
-  -webkit-transition: .1s right linear .6s;
-  transition: .1s right linear .6s;
+  -webkit-transition: .15s right linear 0.4s;
+  transition: .15s right linear 0.4s;
 }
 
 nav .menu.work {
-  -webkit-transition: .1s right linear .6s;
-  transition: .1s right linear .6s;
+  -webkit-transition: .1s right linear 0.4s;
+  transition: .1s right linear 0.4s;
 }
 
 nav .menu.contact {
-  -webkit-transition: .1s right linear .6s;
-  transition: .1s right linear .6s;
+  -webkit-transition: .1s right linear 0.4s;
+  transition: .1s right linear 0.4s;
 }
 
 nav .menu .line {
@@ -495,8 +497,8 @@ nav .menu .line {
   height: 0;
   border: 1px solid #FECF93;
   border-radius: 3px;
-  -webkit-transition: .1s all linear .3s, .3s top linear .4s;
-  transition: .1s all linear .3s, .3s top linear .4s;
+  -webkit-transition: .1s all linear 0s, .3s top linear .1s;
+  transition: .1s all linear 0s, .3s top linear .1s;
 }
 
 nav .menu .line.top {
@@ -639,6 +641,8 @@ main {
   -webkit-box-shadow: 0 0 10px rgba(254, 207, 147, 0.5), inset 0 0 10px rgba(254, 207, 147, 0.3);
           box-shadow: 0 0 10px rgba(254, 207, 147, 0.5), inset 0 0 10px rgba(254, 207, 147, 0.3);
   border: 2px solid #FECF93;
+  -webkit-transition: .1s all linear;
+  transition: .1s all linear;
 }
 
 main.pages {
@@ -647,12 +651,16 @@ main.pages {
 
 section {
   position: absolute;
+  z-index: 1;
+  top: 2%;
   width: 98%;
   height: 96%;
   padding: 25px 10%;
   border-radius: 10px;
   border: 2px dashed #FECF93;
   overflow: hidden;
+  -webkit-transition: 0s all linear .8s, .3s top linear .2s, .2s width linear .5s, .2s height linear .5s;
+  transition: 0s all linear .8s, .3s top linear .2s, .2s width linear .5s, .2s height linear .5s;
 }
 
 section h1 {
@@ -687,18 +695,12 @@ section .blurb:after {
 }
 
 section.closed {
+  z-index: 3;
   padding: 0;
-  bottom: 5%;
-  width: 70px;
+  top: 95%;
+  width: 2%;
   height: 0;
-  border: 1px dashed #FECF93;
-}
-
-section.closed.about {
-  left: 25%;
-}
-
-section.closed.contact {
-  right: 25%;
+  -webkit-transition: 0s all linear .1s, .3s top linear .4s, .2s width linear .2s, .2s height linear;
+  transition: 0s all linear .1s, .3s top linear .4s, .2s width linear .2s, .2s height linear;
 }
 /*# sourceMappingURL=style.css.map */
