@@ -623,6 +623,28 @@ nav:hover .menu.contact .line.bot {
           transform: rotateZ(-35deg);
 }
 
+@-webkit-keyframes upAndDown {
+  from {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  to {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
+@keyframes upAndDown {
+  from {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  to {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+}
+
 main {
   position: relative;
   display: -webkit-box;
@@ -638,8 +660,6 @@ main {
   height: calc(100vh - 50px);
   border-radius: 10px;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 10px rgba(254, 207, 147, 0.5), inset 0 0 10px rgba(254, 207, 147, 0.3);
-          box-shadow: 0 0 10px rgba(254, 207, 147, 0.5), inset 0 0 10px rgba(254, 207, 147, 0.3);
   border: 2px solid #FECF93;
   -webkit-transition: .1s all linear;
   transition: .1s all linear;
@@ -651,21 +671,41 @@ main.pages {
 
 section {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 1;
   top: 2%;
   width: 98%;
   height: 96%;
-  padding: 25px 10%;
+  padding: 25px 5%;
   border-radius: 10px;
   border: 2px dashed #FECF93;
   overflow: hidden;
-  -webkit-transition: 0s all linear .8s, .3s top linear .2s, .2s width linear .5s, .2s height linear .5s;
-  transition: 0s all linear .8s, .3s top linear .2s, .2s width linear .5s, .2s height linear .5s;
+  /*--------opening Transition---------*/
+  -webkit-transition: 0s all linear 1.35s, .3s top linear .8s, .2s width linear 1.1s, .2s height linear 1.3s;
+  transition: 0s all linear 1.35s, .3s top linear .8s, .2s width linear 1.1s, .2s height linear 1.3s;
+  /*----------------------------------*/
+  /*-------ABOUT---------*/
+  /*---------WORK---------*/
+  /*--------CONTACT---------*/
+  /*--------Closing Transition---------*/
 }
 
-section h1 {
+section h2 {
+  display: block;
+  width: 100%;
+  text-align: left;
   margin: 0;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 400;
 }
 
@@ -694,11 +734,223 @@ section .blurb:after {
   border: 2px dashed #FECF93;
 }
 
+section .content {
+  display: inline-block;
+  position: relative;
+  width: 48%;
+  height: 80%;
+  border-radius: 10px;
+  border: 2px solid #FECF93;
+  /*--------animated arrow--------*/
+}
+
+section .content:after {
+  content: 'v';
+  display: block;
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  font-family: 'Coming Soon', cursive;
+  font-weight: 600;
+  -webkit-animation: upAndDown .8s linear infinite alternate;
+          animation: upAndDown .8s linear infinite alternate;
+}
+
+section .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 95%;
+  margin: 0;
+  overflow: hidden;
+}
+
+section .article {
+  position: relative;
+  width: 30%;
+  height: 45%;
+  border: 2px dashed #FECF93;
+  overflow: hidden;
+}
+
+section .article h3 {
+  margin-left: 15px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 2;
+  -webkit-transition: .4s all linear;
+  transition: .4s all linear;
+}
+
+section .article img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  opacity: .7;
+  height: 110%;
+  -webkit-transform: translatex(-50%) translateY(-50%);
+          transform: translatex(-50%) translateY(-50%);
+  -webkit-transition: .3s all linear;
+  transition: .3s all linear;
+}
+
+section .article:hover img {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  opacity: 1;
+  height: 100%;
+}
+
+section .article:hover h3 {
+  opacity: 0;
+}
+
+section form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 80%;
+  width: 50%;
+  padding: 35px;
+  margin-top: 25px;
+  border: 2px solid #FECF93;
+  border-radius: 10px;
+  font-family: 'Coming Soon', cursive;
+  font-size: 1rem;
+}
+
+section form:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scaley(0.95) scalex(0.965);
+          transform: scaley(0.95) scalex(0.965);
+  border-radius: 10px;
+  border: 2px dashed #FECF93;
+}
+
+section form > * {
+  position: relative;
+  z-index: 1;
+}
+
+section form textarea {
+  width: 100%;
+  resize: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed #FECF93;
+  background: none;
+  border-radius: 10px;
+  color: #FECF93;
+  font-size: 1rem;
+}
+
+section form input {
+  outline: none;
+  margin-bottom: 10px;
+}
+
+section form input.text, section form input.submit {
+  border: 2px dashed #FECF93;
+  padding: 5px 10px;
+  background: none;
+  border-radius: 10px;
+  color: #FECF93;
+  font-size: 1rem;
+}
+
+section form input.submit {
+  border: 2px solid #FECF93;
+  cursor: pointer;
+}
+
+section form input:required, section form textarea:required {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+section form label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+section form label input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+section form label .checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px dashed #FECF93;
+  border-radius: 5px;
+}
+
+section form label:hover input + .checkmark {
+  border: 2px solid #FECF93;
+}
+
+section form label input:checked + .checkmark {
+  border: 2px solid #FECF93;
+}
+
+section form label input:checked + .checkmark:after {
+  content: "L";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -3px;
+  left: 3px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: 'Coming Soon', cursive;
+  font-weight: 600;
+  -webkit-transform: scalex(-1) rotateZ(-45deg);
+          transform: scalex(-1) rotateZ(-45deg);
+}
+
 section.closed {
   z-index: 3;
   padding: 0;
   top: 95%;
-  width: 2%;
+  width: 15px;
   height: 0;
   -webkit-transition: 0s all linear .1s, .3s top linear .4s, .2s width linear .2s, .2s height linear;
   transition: 0s all linear .1s, .3s top linear .4s, .2s width linear .2s, .2s height linear;

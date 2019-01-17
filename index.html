@@ -38,19 +38,53 @@
 <main class="">
     <!-- ABOUT -->
     <section class="about closed" id="about">
-        <h1>About Me</h1>
+        <h2>About Me</h2>
         <div class="blurb">
-            Hi, <br>I'm an 8-year-experienced real-time CG artist recently turned Front-End Developper.<br>
-            Always looking for new challenges and interesting opportunities.
+        Hi, <br>I'm an 8-year-experienced real-time CG artist recently turned Front-End Developper.<br>
+        Always looking for new challenges and interesting opportunities.
         </div>
     </section>
     <!-- WORK -->
     <section class="work closed" id="work">
-        <h1>Some of my Work</h1>
+        <h2>Some of my Work</h2>
+        <div class="content">
+            <div class="content-wrapper">
+                    <div class="article">
+                        <h3>Steampunk R2-D2</h3>
+                        <img src="media/images/personnel/Steampunk_R2D2_low_SP1.jpg" alt="R2">
+                    </div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-wrapper">
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+                    <div class="article"></div>
+            </div>
+        </div>
     </section>
     <!-- CONTACT -->
     <section class="contact closed" id="contact">
-        <h1>My Contacts</h1>
+        <h2>Contact me</h2>
+        <form action="" method="GET">
+            <input class="text" type="text" name="name" placeholder="your name" required>
+            <input class="text" type="text" name="email" placeholder="your email address" required>
+            <input class="text" type="text" name="object" id="mail-object" placeholder="object" required>
+            <textarea name="message" id="mail-msg" cols="50" rows="10" placeholder="Your message" required></textarea>
+            <label for="copy">Send a copy to your email address
+                <input type="checkbox" name="copy" id="copy">
+                <span class="checkmark"></span>
+            </label>
+            <input class="submit" type="submit" name="submit" value="Send" id=submit>
+        </form>
     </section>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

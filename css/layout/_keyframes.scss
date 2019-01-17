@@ -1,3 +1,8 @@
-@keyframes openAbout {
-    
+@keyframes upAndDown{
+    from {
+        transform: translateY(10%);
+    }
+    to {
+        transform: translateY(-10%);
+    }
 }
